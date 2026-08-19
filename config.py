@@ -30,12 +30,12 @@ def get_embedder():
 # Load LLMs
 def get_llms():
     extractor_llm = ChatGroq(
-        model="llama-3.1-8b-instant", 
+        model="gpt-oss-20b", 
         temperature=0, 
         model_kwargs={"response_format": {"type": "json_object"}}
     )
     chat_llm = ChatGroq(
-        model="llama-3.1-8b-instant", 
+        model="gpt-oss-20b", 
         temperature=0.3
     )
     return extractor_llm, chat_llm
